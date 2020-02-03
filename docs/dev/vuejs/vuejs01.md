@@ -5,6 +5,4 @@ category: dev/vuejs
 date: '2019-09-04'
 ---
 
-# 옥희의 영화
-
-<div>옥희의 영화 입니다</div>
+# VueJS 시작하기
