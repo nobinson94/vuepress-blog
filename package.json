@@ -1,0 +1,26 @@
+{
+  "name": "nobinson94.github.io",
+  "version": "1.0.0",
+  "description": "Yongtae's first blog project",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nobinson94/nobinson94.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nobinson94/nobinson94.github.io/issues"
+  },
+  "homepage": "https://github.com/nobinson94/nobinson94.github.io#readme",
+  "devDependencies": {
+    "vuepress": "^1.0.3"
+  },
+  "dependencies": {
+    "semantic-ui": "^2.4.2"
+  }
+}
