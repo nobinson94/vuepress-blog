@@ -1,16 +1,13 @@
 ---
-layout: post
+layout: Post
 title: Swift 기초 [Type과 Optional 이해하기]
-category: dev/swift
+category: Swift
 date: '2020-02-04'
+sidebar: auto
 tags: ['swift', 'iOS']
 ---
 
-# Swift 기초 [Type과 Optional 이해하기]
-
-2020.02.04
-
-### (1) Constant & Variable
+## (1) Constant & Variable
 
 - Contant 상수 : 한 번 값이 대입되면 바꿀 수 없는 값
 
@@ -30,7 +27,7 @@ var age = 27
 	- 고려해야할 변수가 적다.
 	- 코드의 가독성이 좋다.
 
-### (2) Type Annotation / Type Interface
+## (2) Type Annotation / Type Interface
 
 - Type Annotation
 
@@ -48,7 +45,7 @@ let age: Int // Int 타입임을 명시
 var message = "hello" // String 타입임을 추론
 ```
 
-### (3) Console 출력
+## (3) Console 출력
 
 - print 함수
 
@@ -66,7 +63,7 @@ print("\(msg1) Yongtae!") // Hello, Yongtae!
 NSLog("Hello, \(msg2)")
 ```
 
-### (4) 여러가지 Type들
+## (4) 여러가지 Type들
 
 
 * __Value Type vs Reference Type__
@@ -84,19 +81,15 @@ NSLog("Hello, \(msg2)")
 |대표적인 것| String, Array, Dictionary | Class로 선언된 객체|
 
 - let으로 reference type의 instance를 선언하더라도 멤버 변수들은 수정이 가능하다!
-
-* __Copy on Write__ 란? 
+- __Copy on Write__ 란?
 	- 복사를 매번 하는 것이 아니라 복사본의 변경 유무를 판단하여 기존 값을 재사용하거나 필요하다면 그 때 복사를 하는 것
-
-* Value Type의 장점
+- Value Type의 장점
 	- Dereference과정이 필요가 없기 때문에 속도 면에서 더 빠르다.
 	- __Mutability 제어__가 강력하다. let으로 선언하면 절대 못 바꾼다! ==> 함수형 언어에 더 적합하게 사용 가능하다.
-
-* Integers
+- Integers
 	- Int8, Int16, Int32, Int64
 	- UInt8, UInt16, UInt32, UInt64
-
-* Floating Point Numbers
+- Floating Point Numbers
 	- __Float__ : 32bit
 	- __Double__ : 64bit
 
@@ -117,16 +110,26 @@ if i {
 * Tuple
 
 
+## (5) Optionals란?
 
-### (5) Optionals란?
-
-* Optional이 무엇일까?
-
-
+- Optional의 의미: 값이 존재하지 않을 수도 있다!
+	- 즉, nil값을 가질 수도 있다. 
 
 
-> Swift는 어떻게 코딩하는 게 좋을까?   
-	
+- var x: Int? ( var x: Int | nil )
+- optional 변수는 값을 명시적으로 초기화해주지 않으면 nil로 초기화된다.
+
+- __의미적으로 특정 type의 값을 저장하는 상자라고 이해할 수 있다.__
+
+- Optional 변수를 그대로 사용해서는 안되며, __unwrapping 과정이 항상 필요하다.__
+
+::: tip Unwrapping이란?
+- 상자의 포장을 벗겨 실제 데이터를 가져오는 것!
+:::
+
+::: tip Swift는 어떻게 코딩하는 게 좋을까?   	
+
 - 매우 강력한 Type Checking 기능을 가지고 있다. 그러므로 항상 Type에 신경써야한다.
 - var는 최소한! let을 늘리자!
 - 값의 부재가능성이 없다면 Optional 사용하는 것은 자제하자.
+:::

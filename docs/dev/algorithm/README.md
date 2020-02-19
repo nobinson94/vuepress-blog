@@ -1,7 +1,5 @@
 ---
 layout: postList
-title: Algorithm
+title: Problem Solving
 category: dev/algorithm
 ---
-
-# 알고리즘 공부

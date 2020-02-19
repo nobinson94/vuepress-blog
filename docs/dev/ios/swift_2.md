@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Swift 기초 [Type과 Optional 이해하기]
-category: dev/swift
+title: Swift 기초 2 [Control Flow]
+path: Swift
+category: dev/ios
 date: '2020-02-04'
 tags: ['swift', 'iOS']
 ---

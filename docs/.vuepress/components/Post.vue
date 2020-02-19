@@ -2,33 +2,39 @@
   <div class="posts">
     <div class="post">
       <div>
-        <div slot="header" class="clearfix">
-          <router-link :to="$page.path" class="post-link">
+        <div slot="header" class="post-header">
+          <router-link :to="$page.path" class="post-link">{{ $page.frontmatter.category }}</router-link>
+          >
+          <router-link :to="$page.path" class="post-link">{{ $page.frontmatter.subcategory }}</router-link>
+          <div class="post-title">
             {{ $page.frontmatter.title }}
-            <br>
-            <span class="post-date">{{ $page.frontmatter.date }}</span>
-          </router-link>
+          </div>
         </div>
-        <Content/>
+        <Content class="post-content" />
       </div>
     </div>
-    <disqus/>
+    <!-- <disqus/> -->
   </div>
 </template>
 <script>
 export default {
   created() {
-    console.log(this.$page)
+    // console.log(this.$site)
   }
 };
 </script>
+
 <style scoped>
 .post-title {
-  margin: 5px;
-  text-size: 15px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  font-size: 40px;
 }
 .post {
 
+} 
+.post-header {
+  margin-bottom: 20px;
 }
 .post-content {
 

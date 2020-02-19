@@ -1,7 +1,7 @@
 @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 400; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype'); }
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-body {
+html, body {
   margin: 0;
   height: 100%;
   width: 100%;
@@ -10,31 +10,44 @@ body {
   display: table;
 }
 #app {
+  /*height: 100%;
+  */width: 100%;
+}
+.gloabl-layout {
+  position: absolute;
+  top: 0;
+  bottom: 0;
   height: 100%;
   width: 100%;
 }
-.wrapper {
-  position: relative;
-  height: 100%;
-  min-width: 100%;
-  display: table;
-  margin: 0 auto -100px;
-}
-.header-wrapper {
+.main-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-height: 100%;
   width: 100%;
-  display: table-row;
+  display: flex;
+  background-color: white;
+}
+.side-bar-wrapper {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background-color: #1b1c1d;
 }
 .content-wrapper {
+  margin-top: 100px;
+  flex: 1 1 auto;
+  min-width: 0px;
+  margin-left: 300px;
+  height: 100%;
   width: 100%;
-  display: table-row;
 }
 .push {
   height: 100px;
 }
 .footer-wrapper {
   width: 100%;
-  display: table-row;
-  position: absolute;
   height: 100px;
   margin-top: 100px;
   bottom: 0px;
@@ -43,4 +56,14 @@ body {
 .last.container {
   margin-bottom: 50px;
   margin-top: 40px;
+}
+.group-title {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.post-list-wrapper {
+  margin-bottom: 60px;
+  padding-top: 20px;
+  /*border-top: 1px solid;
+  border-top-color: rgba(121,121,121,0.4);*/
 }

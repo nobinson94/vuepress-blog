@@ -4,8 +4,6 @@ title: About Me
 category: about
 ---
 
-# About Me
-
 - 권용태 (1994. 10. 23)
 - 컴퓨터과학 전공
 
